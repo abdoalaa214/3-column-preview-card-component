@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(1, 480px);
+    grid-template-areas: "card__orange card__cyan card__dark-cyan";
+}
+.card__orange {
+    grid-area: card__orange;
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(31, 77%, 52%);
+}
+.card__cyan {
+    grid-area: card__cyan;
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(184, 100%, 22%);
+}
+.card__dark-cyan {
+    grid-area: card__dark-cyan;
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(179, 100%, 13%);
+}
+
+.card--text-1 {
+    position: relative;
+    top: 85px;
+    left: 45px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: white;
+    font-family: Big Shoulders Display;
+}
+.card--text-2 {
+    position: relative;
+    top: 105px;
+    left: 45px;
+    display: block;
+    width: 65%;
+    font-size: 0.87rem;
+    font-family: Lexend Deca;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.card--img {
+    width: 62px;
+    position: relative;
+    top: 55px;
+    left: 45px;
+}
+
+.card--button {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 38%;
+    left: 40px;
+    font-family: Lexend Deca;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: white;
+    border-radius: 50px;
+    color: inherit;
+}
+.card--button:hover {
+    background-color: inherit;
+    color: white;
+    border: 2px white solid;
+}
+
+
+@media (max-width:375px) {
+    body {
+        max-width: 375px;
+        height: 100%;        
+    }
+    .grid {
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(3, 470px);
+        grid-template-areas:
+            "card__orange"
+            "card__cyan"
+            "card__dark-cyan";
+    }
+}
+
+@media (max-width:1440px) {
+}
